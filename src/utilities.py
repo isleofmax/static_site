@@ -24,8 +24,8 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
 
 
 def extract_markdown_images(text):
-    return re.findall(r'(\!\[\w+\])(\([\w\W]+\))', text)
+    return re.findall(r'\!\[(\w+)\]\(([\w\W]+)\)', text)
 
 
 def extract_markdown_links(text):
-    return re.findall(r"(\[\w+\])(\(\w+\))", text)
+    return re.findall(r'\[(\w+)\]\(([\w\W]+)\)', text)
